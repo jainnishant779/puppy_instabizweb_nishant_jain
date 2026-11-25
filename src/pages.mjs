@@ -102,9 +102,9 @@ function home(base, data) {
       <div class="actions">${link('View available puppies', `${base}puppies/`)}${link('Enquire on WhatsApp', whatsApp(), 'outline')}</div>
     </div>
     <div class="lineup" aria-label="Featured puppies"><div class="lineup-inner">
-      ${puppies.slice(0, 6).map((p, i) => `<a class="portrait portrait-${i + 1}" style="--i:${i}" href="${profileUrl(base, p)}" aria-label="Meet ${escape(p.name)}">${img(base, p.image, '', true)}<span class="hand">${escape(p.name)}</span></a>`).join('')}
-      <div class="peek">${teddy(base, 'teddy-peek', 'Teddy the puppy mascot')}</div></div>
-      <div class="quilt" aria-hidden="true"></div>
+      ${puppies.slice(0, 6).map((p, i) => `<a class="portrait portrait-${i + 1}" style="--i:${i}" href="${profileUrl(base, p)}" aria-label="Meet ${escape(p.name)}"><span class="portrait-photo">${img(base, p.image, '', true)}</span><span class="hand">${escape(p.name)}</span></a>`).join('')}
+      <div class="peek" data-pup-stop="hero" data-pose="peek" data-facing="right" data-act="peekaboo">${teddy(base, 'teddy-peek', 'Teddy the puppy mascot')}</div></div>
+      <div class="quilt" aria-hidden="true"><svg class="quilt-edge" width="100%" height="40" preserveAspectRatio="none"><defs><pattern id="tp-scallop" width="76" height="40" patternUnits="userSpaceOnUse"><path d="M0 40V27A38 25 0 0 1 76 27V40Z" fill="#fff1d8"></path><path d="M0 27A38 25 0 0 1 76 27" fill="none" stroke="#2a170e" stroke-width="3"></path><path d="M11 33A27 19 0 0 1 65 33" fill="none" stroke="#2a170e" stroke-width="1.6" stroke-dasharray="3.5 5.5" stroke-linecap="round" opacity=".42"></path></pattern></defs><rect width="100%" height="40" fill="url(#tp-scallop)"></rect></svg></div>
       ${json(puppies.map((p) => ({ name: p.name, href: profileUrl(base, p), src: `${base}assets/${p.image}` })), 'data-lineup')}
     </div>
   </section>
@@ -113,7 +113,7 @@ function home(base, data) {
       ${link('See all available puppies', `${base}puppies/`)}</header>
     <div class="hallway">
       ${Array.from({ length: 5 }, (_, row) => `<div class="door-row"><div class="wrap door-grid">
-        ${row === 0 ? `<div class="hall-teddy">${teddy(base)}</div>` : ''}
+        ${row === 0 ? `<div class="hall-teddy" data-pup-stop="hall" data-pose="sit" data-facing="right">${teddy(base)}</div>` : ''}
         ${puppies.slice(row * 3, row * 3 + 3).map((p, i) => `<a class="door-card" href="${profileUrl(base, p)}">
           ${heading(escape(p.name), 'h3')}<p>${escape(p.meta.replaceAll(' · ', ', '))}${p.media.some((m) => m.video) ? ', with video' : ''}</p>
           <span class="arched-door tone-${(row + i) % 3}">${img(base, p.image, p.alt)}<span class="door-panel" aria-hidden="true">${paw}<i></i></span><span class="badge hand">Available</span></span>
@@ -127,7 +127,7 @@ function home(base, data) {
         <p>Spend time with a puppy at the Dubai showroom before choosing.</p>${link('Meet local puppies', `${base}puppies/?origin=local`)}</article>
       <article><h3 class="display sign">Imported for you</h3><div class="path-art flight-art" aria-hidden="true"><div class="flight-line"></div><span class="plane">✈</span><span class="hand korea">Korea</span><span class="hand dubai">Dubai</span></div>
         <p>Ask about Korean teacup breeds and get help arranging their journey to Dubai.</p>${link('See imported puppies', `${base}puppies/?origin=imported`)}</article>
-      <div class="signpost" aria-hidden="true">${teddy(base)}</div>
+      <div class="signpost" aria-hidden="true" data-pup-stop="paths" data-pose="sit" data-facing="right">${teddy(base)}</div>
     </div></div></section>
   <section class="scene journey"><div class="wrap journey-grid"><div>
     ${heading('Your puppy<br>journey')}<p class="intro">From choosing a breed to bringing your puppy home, here’s what to expect.</p>
@@ -139,19 +139,19 @@ function home(base, data) {
         <div class="phone-response" hidden><p>Which breed are you interested in?</p><div class="breed-links">${breeds.map(([key, label]) => `<a href="${base}puppies/?breed=${key}">${label}</a>`).join('')}</div>
         <button class="chat-video" type="button" data-showroom-video="${base}assets/${data.showroomVideo}" aria-label="Play showroom video">${img(base, data.chat, 'Apricot puppy in the showroom')}<span>▶</span></button></div></div>
       <a class="phone-input" href="${whatsApp()}" target="_blank" rel="noopener noreferrer">Say hello on WhatsApp <span aria-hidden="true">➤</span></a>
-    </div><div class="journey-teddy">${teddy(base)}</div></div>
+    </div><div class="journey-teddy" data-pup-stop="journey" data-pose="sit" data-facing="right">${teddy(base)}</div></div>
   </div></section>
-  <section class="scene passport-scene"><div class="wrap passport"><header><p class="hand accent">puppy passport</p>${heading('Why families trust TeddyPups')}${teddy(base)}</header>
-    <div class="stamp-grid">${stamps.map(([icon, title, copy]) => `<div><div class="stamp"><b aria-hidden="true">${icon}</b><strong>${title}</strong></div><p>${copy}</p></div>`).join('')}</div></div>
+  <section class="scene passport-scene"><div class="wrap passport"><header><p class="hand accent">puppy passport</p>${heading('Why families trust TeddyPups')}<div class="passport-teddy" data-pup-stop="passport" data-pose="sit" data-facing="right">${teddy(base)}</div></header>
+    <div class="stamp-grid">${stamps.map(([icon, title, copy], i) => `<div><div class="stamp" style="--i:${i}"><b aria-hidden="true">${icon}</b><strong>${title}</strong></div><p>${copy}</p></div>`).join('')}</div></div>
     <div class="sunset" aria-hidden="true"><div></div>${img(base, 'skyline.svg')}</div>
   </section>
   <section class="scene dusk"><div class="wrap"><div class="family-intro"><header>${heading('Happy families<br>&amp; puppies')}<p class="intro">See the moments families shared after welcoming their TeddyPups home.</p></header>${testimonial()}</div>
     <div class="photo-board">${photoWall(base, data.featuredFamilies, true, [...data.featuredFamilies, ...data.families.filter(({ image }) => !data.featuredFamilies.some(({ match }) => match === image))])}</div>
     <div class="center">${link('See every happy family', `${base}happy-families/`, 'light')}</div></div></section>
-  <section class="scene night"><div class="wrap night-grid"><header>${heading('Questions,<br>answered')}${link('Read all questions', `${base}faq/`, 'light')}${teddy(base)}</header>
+  <section class="scene night"><div class="wrap night-grid"><header>${heading('Questions,<br>answered')}${link('Read all questions', `${base}faq/`, 'light')}<div class="night-teddy" data-pup-stop="night" data-pose="sit" data-facing="right">${teddy(base)}</div></header>
     <div>${data.questions.slice(0, 3).map(({ question, answer }) => `<article>${heading(escape(question), 'h3')}<p>${escape(answer)}</p></article>`).join('')}</div></div></section>
   <section class="scene welcome"><div class="wrap center">${heading('Ready to meet your<br>new best friend?')}<p class="intro">We’ll help you choose a puppy and arrange a visit, collection or delivery.</p>
-    <div class="welcome-house"><a href="${profileUrl(base, puppies[0])}" aria-label="Meet Max">${img(base, puppies[0].image, 'Max the Maltipoo')}</a>${teddy(base, 'teddy-basket')}<div class="hand doormat">welcome home</div></div>
+    <div class="welcome-house"><a href="${profileUrl(base, puppies[0])}" aria-label="Meet Max">${img(base, puppies[0].image, 'Max the Maltipoo')}</a><div class="welcome-teddy" data-pup-stop="welcome" data-pose="basket" data-facing="right" data-act="basket">${teddy(base, 'teddy-basket')}</div><div class="hand doormat">welcome home</div></div>
     <div class="actions">${link('Enquire on WhatsApp', whatsApp(), 'green')}${link('Visit & contact', `${base}contact/`, 'light')}</div>
   </div></section>`;
 }
@@ -180,7 +180,7 @@ function catalog(base, data) {
     <header class="catalog-head"><div><p class="hand accent">from Teddy’s sketchbook</p>
       <div class="title-underline">${heading('Available puppies', 'h1')}${underline}</div>
       <p class="intro">Browse real photos of each puppy. Open a profile for more pictures and ask us about your favorites on WhatsApp.</p></div>
-      <figure class="self-portrait">${teddy(base)}<figcaption class="hand">self-portrait</figcaption></figure></header>
+      <figure class="self-portrait" data-pup-buddy="sit" data-facing="left">${teddy(base)}<figcaption class="hand">self-portrait</figcaption></figure></header>
     <div class="filters paper" data-filters aria-label="Filter puppies">
       ${options.map(([label, key, values]) => `<div class="filter-row" role="group" aria-label="${label}"><span class="hand">${label}</span>
         <div>${values.map(([value, name]) => `<button class="pill outline filter" type="button" data-key="${key}" data-value="${value}" aria-pressed="${value === ''}">${name}</button>`).join('')}</div></div>`).join('')}
@@ -197,7 +197,7 @@ function catalog(base, data) {
 function goneHome(base, data) {
   return `<section class="subpage gone"><div class="wrap"><header class="section-heading"><div>
     ${heading('Gone home <span class="heart" aria-hidden="true">♡</span>', 'h1')}<p class="intro">These puppies have already joined their families. We can help you find a similar puppy.</p>
-    ${link('See available puppies', `${base}puppies/`)}</div><div class="ticket-booth">${teddy(base, 'teddy-peek')}<b class="display awning">tickets home</b></div></header>
+    ${link('See available puppies', `${base}puppies/`)}</div><div class="ticket-booth" data-pup-buddy="peek" data-facing="left" data-act="peekaboo">${teddy(base, 'teddy-peek')}<b class="display awning">tickets home</b></div></header>
     <div class="tickets">${adopted(data).map((p) => `<a class="ticket" href="${profileUrl(base, p)}">
       ${img(base, p.image, p.alt)}<div><span class="hand accent">one ticket home</span>${heading(escape(p.name), 'h2')}
       <p>${escape(p.meta)}</p><small>TEDDYPUPS <span aria-hidden="true">⤏</span> HOME ♥</small></div><strong class="display">admit one</strong></a>`).join('')}</div>
@@ -217,7 +217,7 @@ function faq(base, data) {
     ${heading('Questions<br>&amp; answers', 'h1')}<p class="intro">Looking for something specific? Search below or ask us on WhatsApp.</p></header>
     <div class="faq-layout"><aside><label class="hand" for="faq-search">sniff out a question</label>
       <div class="faq-search"><input type="search" id="faq-search" placeholder="delivery, Korea, vaccinated..." autocomplete="off"></div>
-      <p data-faq-count aria-live="polite">${data.questions.length} notes on the board</p><div class="faq-teddy">${teddy(base)}</div>
+      <p data-faq-count aria-live="polite">${data.questions.length} notes on the board</p><div class="faq-teddy" data-pup-buddy="sit" data-facing="right">${teddy(base)}</div>
       ${link('Ask your own question', whatsApp(), 'green')}</aside>
       <div class="corkboard">${data.questions.map(({ question, answer }) => `<details class="faq-note"><summary>${escape(question)}</summary><p>${escape(answer)}</p></details>`).join('')}
       <p class="empty center" data-no-faq hidden>No matching notes. Try another word or ask us directly.</p></div>
@@ -236,7 +236,7 @@ function howItWorks(base) {
     <p class="intro">Visit us in Dubai or ask us to help you choose a puppy from overseas.</p></header>
     <nav class="jump-links" aria-label="On this page">${sections.map(([id, label], i) => link(`<b>${i + 1}</b> ${label}`, `#${id}`, 'outline')).join('')}</nav>
     <section class="process-section" id="two-ways"><div class="section-heading"><header><p class="hand accent">choose your way</p>${heading('Two ways home')}</header>
-      <div class="journey-tabs" role="tablist" aria-label="Puppy journeys">${journeyTabs.map(({ label, note }, i) => `<button type="button" role="tab" id="way-tab-${i}" aria-controls="way-${i}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}"><strong class="display">${label}</strong><small>${note}</small></button>`).join('')}</div>${teddy(base)}</div>
+      <div class="journey-tabs" role="tablist" aria-label="Puppy journeys">${journeyTabs.map(({ label, note }, i) => `<button type="button" role="tab" id="way-tab-${i}" aria-controls="way-${i}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}"><strong class="display">${label}</strong><small>${note}</small></button>`).join('')}</div><div class="how-teddy" data-pup-buddy="sit" data-facing="left">${teddy(base)}</div></div>
       ${journeyTabs.map(({ title, summary, cards }, i) => `<div class="journey-panel" id="way-${i}" role="tabpanel" aria-labelledby="way-tab-${i}"${i === 0 ? '' : ' hidden'}>
         <div class="journey-panel-lead"><div>${heading(title, 'h3')}<p class="intro">${summary}</p></div>
         <div class="journey-art paper ${i ? 'flight-art' : 'city-card'}">${i ? '<span class="plane" aria-hidden="true">✈</span><span class="hand korea">Korea</span><span class="hand dubai">Dubai</span>' : `<span class="hand accent">Downtown Dubai</span><div aria-hidden="true"></div>${img(base, 'skyline.svg')}`}</div></div>
@@ -288,7 +288,7 @@ function profile(base, data, puppy) {
       ${media.length > 1 ? `<div class="thumbnails" aria-label="Profile media">${media.map((m, index) => `<button type="button" data-thumb="${index}" aria-label="${m.video ? 'Video' : 'Photo'} ${index + 1}" aria-pressed="${index === 0}"><img src="${m.poster || m.src}" alt="" loading="lazy">${m.video ? '<span>▶</span>' : ''}</button>`).join('')}</div>` : ''}
       ${json(media)}
     </div>
-    <div><section class="puppy-tag paper">${teddy(base, 'teddy-peek')}<span class="status">${paw}${isAvailable ? 'Available' : 'Gone home'}</span>${heading(name, 'h1')}
+    <div><section class="puppy-tag paper"><div class="tag-teddy" data-pup-buddy="peek" data-facing="left" data-act="peekaboo">${teddy(base, 'teddy-peek')}</div><span class="status">${paw}${isAvailable ? 'Available' : 'Gone home'}</span>${heading(name, 'h1')}
       <p>${escape(puppy.details.Breed || puppy.meta)}</p>
       ${Object.keys(puppy.details).length ? `<dl>${Object.entries(puppy.details).map(([term, value]) => `<div><dt class="hand">${escape(term)}</dt><dd>${escape(value)}</dd></div>`).join('')}</dl>` : ''}
       ${isAvailable ? '' : '<p>This puppy has already joined a family.</p>'}
