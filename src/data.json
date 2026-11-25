@@ -1,0 +1,1370 @@
+{
+  "logo": "logo.webp",
+  "showroom": "showroom.webp",
+  "chat": "chat-puppy.webp",
+  "showroomVideo": "showroom.mp4",
+  "puppies": [
+    {
+      "slug": "maltipoo-max-male",
+      "name": "Max",
+      "meta": "Maltipoo · boy · 3 months",
+      "alt": "",
+      "image": "maltipoo-max-male.webp",
+      "status": "available",
+      "details": {
+        "Breed": "Maltipoo",
+        "Boy or girl": "Boy",
+        "Age": "3 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "video": "maltipoo-max-male.mp4",
+          "alt": "Max video"
+        }
+      ]
+    },
+    {
+      "slug": "korean-teacup-maltipoo-female",
+      "name": "Korean Teacup Maltipoo",
+      "meta": "girl · 2 months",
+      "alt": "",
+      "image": "korean-teacup-maltipoo-female.webp",
+      "status": "available",
+      "details": {
+        "Breed": "Korean Teacup Maltipoo",
+        "Boy or girl": "Girl",
+        "Age": "2 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "korean-teacup-maltipoo-female-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "korean-teacup-maltipoo-female-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "korean-teacup-maltipoo-female-4.webp",
+          "alt": ""
+        },
+        {
+          "image": "korean-teacup-maltipoo-female-5.webp",
+          "alt": ""
+        },
+        {
+          "image": "korean-teacup-maltipoo-female-6.webp",
+          "alt": ""
+        },
+        {
+          "image": "korean-teacup-maltipoo-female-7.webp",
+          "alt": ""
+        },
+        {
+          "image": "korean-teacup-maltipoo-female-8.webp",
+          "alt": ""
+        },
+        {
+          "image": "korean-teacup-maltipoo-female-9.webp",
+          "alt": ""
+        },
+        {
+          "image": "korean-teacup-maltipoo-female-10.webp",
+          "alt": ""
+        },
+        {
+          "video": "korean-teacup-maltipoo-female.mp4",
+          "alt": "Korean Teacup Maltipoo video"
+        }
+      ]
+    },
+    {
+      "slug": "korean-teacup-poodle-female",
+      "name": "Korean Teacup Poodle",
+      "meta": "girl · 2 months",
+      "alt": "",
+      "image": "korean-teacup-poodle-female.webp",
+      "status": "available",
+      "details": {
+        "Breed": "Korean Teacup Poodle",
+        "Boy or girl": "Girl",
+        "Age": "2 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "korean-teacup-poodle-female-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "korean-teacup-poodle-female-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "korean-teacup-poodle-female-4.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "maltipoo-cavapoo-male",
+      "name": "Maltipoo & Cavapoo",
+      "meta": "boy · 3 months Maltipoo & 2 months Cavapoo",
+      "alt": "",
+      "image": "maltipoo-cavapoo-male.webp",
+      "status": "available",
+      "details": {
+        "Breed": "Maltipoo & Cavapoo",
+        "Boy or girl": "Boy",
+        "Age": "3 months Maltipoo & 2 months Cavapoo",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "maltipoo-cavapoo-male-2.webp",
+          "alt": ""
+        },
+        {
+          "video": "maltipoo-cavapoo-male.mp4",
+          "alt": "Maltipoo & Cavapoo video"
+        }
+      ]
+    },
+    {
+      "slug": "toy-poodle-male-female",
+      "name": "Toy Poodle",
+      "meta": "boy & girl · 2 months",
+      "alt": "",
+      "image": "toy-poodle-male-female.webp",
+      "status": "available",
+      "details": {
+        "Breed": "Toy Poodle",
+        "Boy or girl": "Boy & girl",
+        "Age": "2 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "toy-poodle-male-female-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "toy-poodle-male-female-3.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "maltipoo-female-2",
+      "name": "Maltipoo",
+      "meta": "girl · 3 months",
+      "alt": "",
+      "image": "maltipoo-female-2.webp",
+      "status": "available",
+      "details": {
+        "Breed": "Maltipoo",
+        "Boy or girl": "Girl",
+        "Age": "3 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "maltipoo-female-2-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-female-2-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-female-2-4.webp",
+          "alt": ""
+        },
+        {
+          "video": "maltipoo-female-2.mp4",
+          "alt": "Maltipoo video"
+        },
+        {
+          "video": "maltipoo-female-22.mp4",
+          "alt": "Maltipoo video"
+        },
+        {
+          "video": "maltipoo-female-23.mp4",
+          "alt": "Maltipoo video"
+        }
+      ]
+    },
+    {
+      "slug": "pomeranian-female",
+      "name": "Pomeranian",
+      "meta": "girl · 3 months",
+      "alt": "",
+      "image": "pomeranian-female.webp",
+      "status": "available",
+      "details": {
+        "Breed": "Pomeranian",
+        "Boy or girl": "Girl",
+        "Age": "3 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "pomeranian-female-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "pomeranian-female-3.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "copper-male",
+      "name": "Copper",
+      "meta": "Cavapoo · boy · 2 months",
+      "alt": "",
+      "image": "copper-male.webp",
+      "status": "available",
+      "details": {
+        "Breed": "Cavapoo",
+        "Boy or girl": "Boy",
+        "Age": "2 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "copper-male-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "copper-male-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "copper-male-4.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "shitzu-female",
+      "name": "Shih Tzu",
+      "meta": "girl · 2 months",
+      "alt": "",
+      "image": "shitzu-female.webp",
+      "status": "available",
+      "details": {
+        "Breed": "Shih Tzu",
+        "Boy or girl": "Girl",
+        "Age": "2 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "shitzu-female-2.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "shitzu-male",
+      "name": "Shih Tzu",
+      "meta": "boy · 2 months",
+      "alt": "",
+      "image": "shitzu-male.webp",
+      "status": "available",
+      "details": {
+        "Breed": "Shih Tzu",
+        "Boy or girl": "Boy",
+        "Age": "2 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "shitzu-male-2.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "maltipoo-female-1",
+      "name": "Maltipoo",
+      "meta": "girl · 2.5 months",
+      "alt": "",
+      "image": "maltipoo-female-1.webp",
+      "status": "available",
+      "details": {
+        "Breed": "Maltipoo",
+        "Boy or girl": "Girl",
+        "Age": "2.5 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "maltipoo-female-1-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-female-1-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-female-1-4.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "maltipoo-female",
+      "name": "Maltipoo",
+      "meta": "girl · 2 months",
+      "alt": "",
+      "image": "maltipoo-female.webp",
+      "status": "available",
+      "details": {
+        "Breed": "Maltipoo",
+        "Boy or girl": "Girl",
+        "Age": "2 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "maltipoo-female-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-female-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-female-4.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "korean-teacup-pomeranian-1",
+      "name": "Korean Teacup Pomeranian",
+      "meta": "girl · 2 months",
+      "alt": "",
+      "image": "korean-teacup-pomeranian-1.webp",
+      "status": "available",
+      "details": {
+        "Breed": "Korean Teacup Pomeranian",
+        "Boy or girl": "Girl",
+        "Age": "2 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "korean-teacup-pomeranian-1-2.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "korean-teacup-pomeranian",
+      "name": "Korean Teacup Pomeranian",
+      "meta": "girl · 2 months",
+      "alt": "",
+      "image": "korean-teacup-pomeranian.webp",
+      "status": "available",
+      "details": {
+        "Breed": "Korean Teacup Pomeranian",
+        "Boy or girl": "Girl",
+        "Age": "2 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "korean-teacup-pomeranian-2.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "korean-teacup-pomeranian-male",
+      "name": "Korean Teacup Pomeranian",
+      "meta": "boy · 2 months",
+      "alt": "",
+      "image": "korean-teacup-pomeranian-male.webp",
+      "status": "available",
+      "details": {
+        "Breed": "Korean Teacup Pomeranian",
+        "Boy or girl": "Boy",
+        "Age": "2 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "korean-teacup-pomeranian-male-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "korean-teacup-pomeranian-male-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "korean-teacup-pomeranian-male-4.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "pomeranian-ace-boy",
+      "name": "Ace",
+      "meta": "Pomeranian, boy",
+      "alt": "Ace, male Pomeranian puppy",
+      "image": "pomeranian-ace-boy.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Pomeranian",
+        "Boy or girl": "Boy",
+        "Age": "3 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "pomeranian-ace-boy-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "pomeranian-ace-boy-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "pomeranian-ace-boy-4.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "poodle-leo-male",
+      "name": "Leo",
+      "meta": "Poodle, boy",
+      "alt": "Leo, male Poodle puppy",
+      "image": "poodle-leo-male.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Poodle",
+        "Boy or girl": "Boy",
+        "Age": "3 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "poodle-leo-male-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "poodle-leo-male-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "poodle-leo-male-4.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "maltipoo-mia-girl",
+      "name": "Mia",
+      "meta": "Maltipoo, girl",
+      "alt": "Sadie, female Maltipoo puppy, photo 4",
+      "image": "maltipoo-mia-girl.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Maltipoo",
+        "Boy or girl": "Girl",
+        "Age": "3 months",
+        "Colour": "Golden Cream",
+        "Where": "In Dubai"
+      },
+      "media": [
+        {
+          "image": "maltipoo-mia-girl-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-mia-girl-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-mia-girl-4.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "maltipoo-sadie-girl",
+      "name": "Sadie",
+      "meta": "Maltipoo, girl",
+      "alt": "Sadie, female Maltipoo puppy",
+      "image": "maltipoo-sadie-girl.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Maltipoo",
+        "Boy or girl": "Girl",
+        "Age": "3 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "maltipoo-sadie-girl-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-sadie-girl-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-sadie-girl-4.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "blue-marle-pomeranian",
+      "name": "Pomeranian",
+      "meta": "Boy",
+      "alt": "Male Pomeranian puppy",
+      "image": "blue-marle-pomeranian.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Pomeranian",
+        "Boy or girl": "Boy",
+        "Age": "3 months",
+        "Colour": "Marble",
+        "Where": "Imported for you"
+      },
+      "media": []
+    },
+    {
+      "slug": "pomsky-ollie-boy",
+      "name": "Ollie",
+      "meta": "Pomsky, boy",
+      "alt": "Ollie, male Pomsky puppy",
+      "image": "pomsky-ollie-boy.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Pomsky",
+        "Boy or girl": "Boy",
+        "Age": "3 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "pomsky-ollie-boy-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "pomsky-ollie-boy-3.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "maltipoo-bruno-boy",
+      "name": "Bruno",
+      "meta": "Maltipoo, boy",
+      "alt": "Bruno, male Maltipoo puppy",
+      "image": "maltipoo-bruno-boy.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Maltipoo",
+        "Boy or girl": "Boy",
+        "Age": "3 months",
+        "Where": "In Dubai"
+      },
+      "media": [
+        {
+          "image": "maltipoo-bruno-boy-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-bruno-boy-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-bruno-boy-4.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "maltese-buddy-male",
+      "name": "Buddy",
+      "meta": "Maltese, boy",
+      "alt": "Buddy, male Maltese puppy",
+      "image": "maltese-buddy-male.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Maltese",
+        "Boy or girl": "Boy",
+        "Age": "2 months",
+        "Where": "In Dubai"
+      },
+      "media": []
+    },
+    {
+      "slug": "maltese-charlie-male",
+      "name": "Charlie",
+      "meta": "Maltese, boy",
+      "alt": "Charlie, male Maltese puppy",
+      "image": "maltese-charlie-male.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Maltese",
+        "Boy or girl": "Boy",
+        "Age": "3.5 months",
+        "Where": "Imported for you"
+      },
+      "media": []
+    },
+    {
+      "slug": "pomeranian-daisy-girl",
+      "name": "Daisy",
+      "meta": "Pomeranian, girl",
+      "alt": "Daisy, female Pomeranian puppy",
+      "image": "pomeranian-daisy-girl.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Pomeranian",
+        "Boy or girl": "Girl",
+        "Age": "2 months",
+        "Where": "In Dubai"
+      },
+      "media": []
+    },
+    {
+      "slug": "pomeranian-bella-female",
+      "name": "Bella",
+      "meta": "Pomeranian, girl",
+      "alt": "Bella, female Pomeranian puppy",
+      "image": "pomeranian-bella-female.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Pomeranian",
+        "Boy or girl": "Girl",
+        "Age": "4 months",
+        "Where": "Imported for you"
+      },
+      "media": []
+    },
+    {
+      "slug": "poodle-teddy-male",
+      "name": "Teddy",
+      "meta": "Poodle, boy",
+      "alt": "Teddy, male Poodle puppy",
+      "image": "poodle-teddy-male.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Poodle",
+        "Boy or girl": "Boy",
+        "Age": "3 months",
+        "Where": "Imported for you"
+      },
+      "media": []
+    },
+    {
+      "slug": "poodle-molly-female",
+      "name": "Molly",
+      "meta": "Poodle, girl",
+      "alt": "Molly, female Poodle puppy",
+      "image": "poodle-molly-female.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Poodle",
+        "Boy or girl": "Girl",
+        "Age": "3 months",
+        "Where": "In Dubai"
+      },
+      "media": []
+    },
+    {
+      "slug": "pomski-coco-girl",
+      "name": "Coco",
+      "meta": "Pomsky, girl",
+      "alt": "Coco, female Pomsky puppy",
+      "image": "pomski-coco-girl.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Pomsky",
+        "Boy or girl": "Girl",
+        "Age": "3 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "pomski-coco-girl-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "pomski-coco-girl-3.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "pomsky-rosie-girl",
+      "name": "Rosie",
+      "meta": "Pomsky, girl",
+      "alt": "Rosie, female Pomsky puppy",
+      "image": "pomsky-rosie-girl.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Pomsky",
+        "Boy or girl": "Girl",
+        "Age": "3 months",
+        "Where": "In Dubai"
+      },
+      "media": [
+        {
+          "image": "pomsky-rosie-girl-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "pomsky-rosie-girl-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "pomsky-rosie-girl-4.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "pomeranian-leo-boy",
+      "name": "Leo",
+      "meta": "Pomeranian, boy",
+      "alt": "Leo, male Pomeranian puppy",
+      "image": "pomeranian-leo-boy.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Pomeranian",
+        "Boy or girl": "Boy",
+        "Age": "3 months",
+        "Where": "In Dubai"
+      },
+      "media": [
+        {
+          "image": "pomeranian-leo-boy-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "pomeranian-leo-boy-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "pomeranian-leo-boy-4.webp",
+          "alt": ""
+        },
+        {
+          "image": "pomeranian-leo-boy-5.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "poodle-molly-girl",
+      "name": "Molly",
+      "meta": "Poodle, girl",
+      "alt": "Molly, female Poodle puppy",
+      "image": "poodle-molly-girl.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Poodle",
+        "Boy or girl": "Girl",
+        "Age": "3 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "poodle-molly-girl-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "poodle-molly-girl-3.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "poodle-rocky-boy",
+      "name": "Rocky",
+      "meta": "Poodle, boy",
+      "alt": "Rocky, male Poodle puppy",
+      "image": "poodle-rocky-boy.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Poodle",
+        "Boy or girl": "Boy",
+        "Age": "3 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "poodle-rocky-boy-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "poodle-rocky-boy-3.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "maltipoo-sophie-girl",
+      "name": "Sophie",
+      "meta": "Maltipoo, girl",
+      "alt": "Sophie, female Maltipoo puppy",
+      "image": "maltipoo-sophie-girl.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Maltipoo",
+        "Boy or girl": "Girl",
+        "Age": "3 months",
+        "Where": "In Dubai"
+      },
+      "media": [
+        {
+          "image": "maltipoo-sophie-girl-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-sophie-girl-3.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "maltipoo-lola-girl",
+      "name": "Lola",
+      "meta": "Maltipoo, girl",
+      "alt": "Lola, female Maltipoo puppy",
+      "image": "maltipoo-lola-girl.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Maltipoo",
+        "Boy or girl": "Girl",
+        "Age": "3 months",
+        "Where": "In Dubai"
+      },
+      "media": [
+        {
+          "image": "maltipoo-lola-girl-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-lola-girl-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-lola-girl-4.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "pomeranian-rex-boy",
+      "name": "Rex",
+      "meta": "Pomeranian, boy",
+      "alt": "Rex, male Pomeranian puppy",
+      "image": "pomeranian-rex-boy.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Pomeranian",
+        "Boy or girl": "Boy",
+        "Age": "5 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "pomeranian-rex-boy-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "pomeranian-rex-boy-3.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "pomsky-finn-male",
+      "name": "Finn",
+      "meta": "Pomsky, boy",
+      "alt": "Finn, male Pomsky puppy",
+      "image": "pomsky-finn-male.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Pomsky",
+        "Boy or girl": "Boy",
+        "Age": "3 months",
+        "Where": "Imported for you"
+      },
+      "media": []
+    },
+    {
+      "slug": "maltipoo-zoe-girl",
+      "name": "Zoe",
+      "meta": "Maltipoo, girl",
+      "alt": "Zoe, female Maltipoo puppy",
+      "image": "maltipoo-zoe-girl.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Maltipoo",
+        "Boy or girl": "Girl",
+        "Age": "3 months",
+        "Where": "Imported for you"
+      },
+      "media": [
+        {
+          "image": "maltipoo-zoe-girl-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-zoe-girl-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-zoe-girl-4.webp",
+          "alt": ""
+        },
+        {
+          "image": "maltipoo-zoe-girl-5.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "pomeranian-mimi-girl",
+      "name": "Mimi",
+      "meta": "Pomeranian, girl",
+      "alt": "Mimi, female Pomeranian puppy",
+      "image": "pomeranian-mimi-girl.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Pomeranian",
+        "Boy or girl": "Girl",
+        "Age": "3 months",
+        "Where": "In Dubai"
+      },
+      "media": [
+        {
+          "image": "pomeranian-mimi-girl-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "pomeranian-mimi-girl-3.webp",
+          "alt": ""
+        },
+        {
+          "image": "pomeranian-mimi-girl-4.webp",
+          "alt": ""
+        },
+        {
+          "image": "pomeranian-mimi-girl-5.webp",
+          "alt": ""
+        },
+        {
+          "image": "pomeranian-mimi-girl-6.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "bichon-bailey-boy",
+      "name": "Bailey",
+      "meta": "Bichon, boy",
+      "alt": "Bailey, male Bichon puppy",
+      "image": "bichon-bailey-boy.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Bichon",
+        "Boy or girl": "Boy",
+        "Age": "3 months",
+        "Where": "In Dubai"
+      },
+      "media": [
+        {
+          "image": "bichon-bailey-boy-2.webp",
+          "alt": ""
+        },
+        {
+          "image": "bichon-bailey-boy-3.webp",
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "slug": "puppy",
+      "name": "Maltipoo",
+      "meta": "Girl",
+      "alt": "Female Maltipoo puppy",
+      "image": "puppy.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Maltipoo",
+        "Boy or girl": "Girl",
+        "Age": "3 months",
+        "Where": "Imported for you"
+      },
+      "media": []
+    },
+    {
+      "slug": "maltipo",
+      "name": "Poodle",
+      "meta": "Girl",
+      "alt": "Female Poodle puppy",
+      "image": "maltipo.webp",
+      "status": "gone",
+      "details": {
+        "Breed": "Poodle",
+        "Boy or girl": "Girl",
+        "Age": "3 months",
+        "Where": "In Dubai"
+      },
+      "media": []
+    }
+  ],
+  "families": [
+    {
+      "image": "family-1.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-2.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-3.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-4.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-5.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-6.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-7.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-8.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-9.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-10.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-11.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-12.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-13.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-14.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-15.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-16.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-17.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-18.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-19.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-20.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-21.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-22.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-23.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-24.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-25.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-26.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-27.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-28.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-29.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-30.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-31.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-32.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-33.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-34.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-35.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-36.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-37.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-38.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-39.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-40.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-41.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-42.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-43.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-44.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-45.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-46.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-47.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-48.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-49.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-50.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-51.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-52.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-53.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-54.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-55.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-56.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-57.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-58.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-59.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-60.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-61.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-62.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-63.webp",
+      "caption": "A family with their new puppy"
+    },
+    {
+      "image": "family-64.webp",
+      "caption": "A family with their new puppy"
+    }
+  ],
+  "featuredFamilies": [
+    {
+      "image": "featured-family-1.webp",
+      "caption": "Lulu 🧸 with her new mummy ❤️",
+      "match": "family-46.webp"
+    },
+    {
+      "image": "featured-family-2.webp",
+      "caption": "Adorable Maltipoo baby 🧸❤️",
+      "match": "family-47.webp"
+    },
+    {
+      "image": "featured-family-3.webp",
+      "caption": "My new teddy puppy 🥰🧸",
+      "match": "family-48.webp"
+    },
+    {
+      "image": "featured-family-4.webp",
+      "caption": "Our new puppies 🧸🥰🤗",
+      "match": "family-49.webp"
+    },
+    {
+      "image": "featured-family-5.webp",
+      "caption": "New puppy 🧸😍",
+      "match": "family-50.webp"
+    },
+    {
+      "image": "featured-family-6.webp",
+      "caption": "Gang of 3 😍🧸",
+      "match": "family-51.webp"
+    },
+    {
+      "image": "featured-family-7.webp",
+      "caption": "So happy 😍😍",
+      "match": "family-52.webp"
+    },
+    {
+      "image": "featured-family-8.webp",
+      "caption": "New pup 🤗💫",
+      "match": "family-59.webp"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Are your puppies vaccinated and health-checked?",
+      "answer": "Yes. All our puppies come with a verified health certificate from licensed vets. Every puppy is vaccinated, dewormed, and thoroughly checked before joining your family."
+    },
+    {
+      "question": "Can I meet a puppy before I decide?",
+      "answer": "Yes. Come meet our locally available puppies in our Downtown Dubai showroom and spend time bonding before making your decision."
+    },
+    {
+      "question": "Can I take my puppy home the same day?",
+      "answer": "Local puppies are available immediately, so you can take your puppy home the same day."
+    },
+    {
+      "question": "Do you import puppies from abroad?",
+      "answer": "Yes. Through our Order Upon Request service we source rare and premium teacup breeds from the most reputable, certified breeders across Europe, Korea, and beyond — and we handle the import for you."
+    },
+    {
+      "question": "How does an imported puppy travel to Dubai?",
+      "answer": "We manage every part of the import process, including health checks, travel arrangements, and the necessary documentation, so your puppy arrives happy, healthy, and stress-free."
+    },
+    {
+      "question": "Will I see photos and health details first?",
+      "answer": "Yes. Photos, videos, and health certificates are shared before your puppy travels, and our team sends real photos and health details directly on WhatsApp."
+    },
+    {
+      "question": "Do you deliver?",
+      "answer": "Yes. We deliver within Dubai, and our trusted international cargo partners deliver puppies safely to loving homes all around the world."
+    },
+    {
+      "question": "Which breeds do you usually have?",
+      "answer": "Breeds we regularly have include Maltipoo, Pomeranian, Poodle and Bichon, plus rare teacup lines such as Korean teacup poodles, Maltese, Pom and Yorkie."
+    },
+    {
+      "question": "Is there help after my puppy comes home?",
+      "answer": "Yes. Our team is available 24/7 and offers advice on training, nutrition, and general care to ensure a smooth transition for you and your new furry friend."
+    }
+  ]
+}
