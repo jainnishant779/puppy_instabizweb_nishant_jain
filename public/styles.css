@@ -22,13 +22,19 @@
   --milk: #fffdf8;
   --cream: #fff1d8;
   --honey: #f2be6b;
+  --honey-soft: #fbe3b4;
   --toffee: #c2622b;
+  --toffee-deep: #a24a1a;
+  --toffee-ink: #8e3f15;
   --rust: #9c461c;
   --green: #1e774e;
   --body: #593825;
   --gutter: clamp(1rem, 4vw, 4.5rem);
   --header: 76px;
   --shadow: 6px 8px 0 #2a170e24;
+  --ease-pounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-silk: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-snap: cubic-bezier(0.7, 0, 0.2, 1);
   font-family: Figtree, Arial, sans-serif;
   color: var(--ink);
   background: var(--milk);
@@ -75,6 +81,37 @@ button {
 }
 button:disabled {
   cursor: default;
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  html,
+  body {
+    cursor: url(assets/paw.svg) 9 6, auto;
+  }
+  :is(
+    a,
+    button:not(:disabled),
+    summary,
+    label[for],
+    [role="button"],
+    [role="tab"],
+    select,
+    input[type="checkbox"],
+    input[type="radio"],
+    input[type="submit"],
+    .story-expand
+  ) {
+    cursor: url(assets/paw-press.svg) 9 6, pointer;
+  }
+  :is(
+    input:not([type="checkbox"], [type="radio"], [type="submit"], [type="range"]),
+    textarea,
+    [contenteditable="true"]
+  ) {
+    cursor: text;
+  }
+  :is(p, h1, h2, h3, h4, li, blockquote, figcaption, dd, dt) {
+    cursor: inherit;
+  }
 }
 :focus-visible {
   outline: 3px solid #30749b;
@@ -363,6 +400,7 @@ h3.display {
 }
 
 .hero {
+  position: relative;
   min-height: calc(100svh - var(--header));
   background:
     radial-gradient(
@@ -375,6 +413,18 @@ h3.display {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+}
+.hero-sun {
+  pointer-events: none;
+  position: absolute;
+  top: 4%;
+  left: 50%;
+  width: min(86vw, 58rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  translate: -50%;
+  background: radial-gradient(circle, #f2be6b6b 0, #fbe3b44d 38%, transparent 66%);
+  animation: tp-sunrise 2.6s var(--ease-silk) both;
 }
 .hero-copy {
   position: relative;
@@ -438,7 +488,21 @@ h3.display {
   border: 3px solid var(--ink);
   border-radius: 52% 52% 0.3rem 0.3rem / 42% 42% 0.3rem 0.3rem;
   background: var(--honey);
-  transition: bottom 0.25s;
+  animation: tp-peek 0.75s var(--ease-pounce) backwards;
+  animation-delay: calc(0.62s + var(--i, 0) * 90ms);
+  transition:
+    bottom 0.25s,
+    translate 0.34s var(--ease-snap),
+    scale 0.34s var(--ease-snap),
+    opacity 0.34s ease-in;
+}
+.portrait[data-state="duck"] {
+  opacity: 0.6;
+  translate: 0 108%;
+  scale: 0.92;
+}
+.portrait[data-state="pop"] {
+  animation: tp-pop-up 0.58s var(--ease-pounce) both;
 }
 .portrait img {
   border-radius: inherit;
@@ -465,7 +529,8 @@ h3.display {
   z-index: 4;
 }
 .portrait:hover .hand,
-.portrait:focus-visible .hand {
+.portrait:focus-visible .hand,
+.portrait.is-named .hand {
   opacity: 1;
 }
 .portrait-1 {
@@ -507,6 +572,7 @@ h3.display {
   left: 51%;
   bottom: -0.35rem;
   transform: translateX(-50%);
+  animation: tp-peek 0.75s var(--ease-pounce) 0.85s backwards;
 }
 .peek img {
   width: 100%;
@@ -2763,7 +2829,261 @@ body:has(dialog[open]) {
     width: 100%;
   }
 }
+.tp-curtain {
+  z-index: 95;
+  pointer-events: none;
+  visibility: hidden;
+  position: fixed;
+  inset: 0;
+  overflow: clip;
+}
+.tp-curtain:is(
+  [data-state="intro"],
+  [data-state="covering"],
+  [data-state="covered"],
+  [data-state="snap"],
+  [data-state="lifting"]
+) {
+  visibility: visible;
+}
+.tp-curtain:is([data-state="covering"], [data-state="covered"], [data-state="snap"]) {
+  pointer-events: auto;
+  cursor: progress;
+}
+.tp-curtain__blanket {
+  background:
+    repeating-linear-gradient(45deg, transparent 0 46px, #2a170e12 46px 48px),
+    repeating-linear-gradient(-45deg, transparent 0 46px, #2a170e12 46px 48px),
+    radial-gradient(circle at 50% 46%, var(--milk) 0, transparent 60%),
+    var(--honey-soft);
+  will-change: transform;
+  place-items: center;
+  display: grid;
+  position: absolute;
+  inset: 0;
+  transform: translateY(calc(100% + 44px));
+}
+.tp-curtain__edge {
+  display: block;
+  position: absolute;
+  left: 0;
+}
+.tp-curtain__edge--top {
+  top: -39px;
+}
+.tp-curtain__edge--bottom {
+  bottom: -39px;
+  scale: 1 -1;
+}
+.tp-curtain[data-state="intro"] {
+  animation: 0s linear 1.04s forwards tp-curtain-rest;
+}
+.tp-curtain[data-state="intro"] .tp-curtain__blanket {
+  animation: 0.48s cubic-bezier(0.65, 0, 0.3, 1) 0.56s forwards tp-curtain-lift;
+  transform: translate(0);
+}
+.tp-curtain[data-state="covering"] .tp-curtain__blanket {
+  animation: 0.3s var(--ease-silk) both tp-curtain-cover;
+}
+.tp-curtain:is([data-state="covered"], [data-state="snap"]) .tp-curtain__blanket {
+  transform: translate(0);
+}
+.tp-curtain[data-state="lifting"] .tp-curtain__blanket {
+  animation: 0.46s cubic-bezier(0.65, 0, 0.3, 1) both tp-curtain-lift;
+}
+.tp-curtain__stage {
+  width: min(44rem, 86vw);
+  height: clamp(9rem, 24vw, 12rem);
+  position: relative;
+}
+.tp-curtain__runner {
+  width: clamp(6.5rem, 15vw, 9rem);
+  position: absolute;
+  bottom: 1.4rem;
+  left: 0;
+}
+.tp-curtain__prints {
+  height: 2.2rem;
+  position: absolute;
+  inset: auto 0 1.1rem;
+}
+.tp-curtain__print {
+  width: clamp(1rem, 2.4vw, 1.45rem);
+  fill: var(--toffee);
+  opacity: 0;
+  position: absolute;
+}
+.tp-curtain__note {
+  white-space: nowrap;
+  color: var(--toffee-ink);
+  font-size: clamp(1.05rem, 2.4vw, 1.45rem);
+  font-variation-settings:
+    "INFM" 60,
+    "BNCE" 30;
+  font-weight: 500;
+  margin: 0;
+  position: absolute;
+  bottom: -1.2rem;
+  left: 50%;
+  translate: -50%;
+}
+.tp-curtain:not([data-state="idle"]) .tp-curtain__runner {
+  animation: 1.15s cubic-bezier(0.32, 0.1, 0.4, 1) both tp-runner-x;
+}
+.tp-curtain:not([data-state="idle"]) .tp-curtain__print {
+  animation: 1s ease-out both tp-print-step;
+}
+.tp-runner :is(.tp-runner__leg, .tp-runner__tail, .tp-runner__ear) {
+  transform-box: view-box;
+}
+.tp-curtain:not([data-state="idle"]) .tp-runner__leg--fn,
+.tp-curtain:not([data-state="idle"]) .tp-runner__leg--bf {
+  animation: 0.32s ease-in-out infinite alternate tp-runner-leg-a;
+}
+.tp-curtain:not([data-state="idle"]) .tp-runner__leg--ff,
+.tp-curtain:not([data-state="idle"]) .tp-runner__leg--bn {
+  animation: 0.32s ease-in-out infinite alternate tp-runner-leg-b;
+}
+.tp-curtain:not([data-state="idle"]) .tp-runner__body {
+  animation: 0.16s ease-in-out infinite alternate tp-runner-bob;
+}
+.tp-curtain:not([data-state="idle"]) .tp-runner__tail {
+  animation: 0.22s ease-in-out infinite alternate tp-runner-wag;
+}
+.tp-curtain:not([data-state="idle"]) .tp-runner__ear {
+  animation: 0.16s ease-in-out infinite alternate tp-runner-ear;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:has(> body > .tp-curtain[data-state="intro"]) {
+    animation: 1.04s tp-hold-still;
+  }
+}
+@keyframes tp-curtain-cover {
+  0% {
+    transform: translateY(calc(100% + 44px));
+  }
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes tp-curtain-lift {
+  0% {
+    transform: translate(0);
+  }
+  to {
+    transform: translateY(calc(-100% - 44px));
+  }
+}
+@keyframes tp-curtain-rest {
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes tp-runner-x {
+  0% {
+    translate: -40%;
+  }
+  to {
+    translate: calc(min(44rem, 86vw) / 1.5625);
+  }
+}
+@keyframes tp-print-step {
+  0% {
+    opacity: 0;
+    scale: 0.4;
+  }
+  14% {
+    opacity: 0.7;
+    scale: 1.08;
+  }
+  26% {
+    scale: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes tp-runner-leg-a {
+  0% {
+    rotate: 24deg;
+  }
+  to {
+    rotate: -22deg;
+  }
+}
+@keyframes tp-runner-leg-b {
+  0% {
+    rotate: -22deg;
+  }
+  to {
+    rotate: 24deg;
+  }
+}
+@keyframes tp-runner-bob {
+  0% {
+    translate: 0;
+  }
+  to {
+    translate: 0 -6px;
+  }
+}
+@keyframes tp-runner-wag {
+  0% {
+    rotate: -16deg;
+  }
+  to {
+    rotate: 14deg;
+  }
+}
+@keyframes tp-runner-ear {
+  0% {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 8deg;
+  }
+}
+@keyframes tp-hold-still {
+  0%,
+  to {
+    overflow-y: hidden;
+  }
+}
+@keyframes tp-sunrise {
+  0% {
+    opacity: 0;
+    translate: -50% 16%;
+  }
+}
+@keyframes tp-peek {
+  0% {
+    translate: 0 100%;
+  }
+}
+@keyframes tp-pop-up {
+  0% {
+    opacity: 0.6;
+    translate: 0 108%;
+    scale: 0.92;
+  }
+  65% {
+    opacity: 1;
+    scale: 1.04;
+  }
+  to {
+    opacity: 1;
+    translate: 0;
+    scale: 1;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .tp-curtain {
+    display: none !important;
+  }
   *,
   *::before,
   *::after {

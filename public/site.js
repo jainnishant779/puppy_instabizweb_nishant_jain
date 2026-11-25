@@ -1,3 +1,24 @@
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const curtain = document.querySelector('.tp-curtain');
+if (curtain) {
+  if (reducedMotion) curtain.dataset.state = 'idle';
+  else {
+    const finishIntro = () => {
+      if (curtain.dataset.state === 'intro') curtain.dataset.state = 'idle';
+    };
+    const blanket = curtain.querySelector('.tp-curtain__blanket');
+    blanket?.addEventListener('animationend', (event) => {
+      if (event.animationName === 'tp-curtain-lift') finishIntro();
+    });
+    const lift = blanket?.getAnimations().find((a) => a.animationName === 'tp-curtain-lift');
+    const remaining = lift ? Math.max(0, 1080 - Number(lift.currentTime || 0)) : 1080;
+    setTimeout(finishIntro, remaining + 60);
+  }
+  window.addEventListener('pageshow', (event) => {
+    if (event.persisted) curtain.dataset.state = 'idle';
+  });
+}
+
 const menu = document.querySelector('#mobile-menu');
 const menuToggle = document.querySelector('[data-menu]');
 menuToggle.addEventListener('click', () => {
@@ -6,6 +27,22 @@ menuToggle.addEventListener('click', () => {
 });
 menu.querySelector('[data-close-menu]').addEventListener('click', () => menu.close());
 menu.addEventListener('close', () => menuToggle.setAttribute('aria-expanded', 'false'));
+
+if (curtain && !reducedMotion) {
+  let navigating = false;
+  document.addEventListener('click', (event) => {
+    if (navigating || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const anchor = event.target.closest('a[href]');
+    if (!anchor || anchor.hasAttribute('download') || (anchor.target && anchor.target !== '_self')) return;
+    const url = new URL(anchor.href, location.href);
+    if (url.origin !== location.origin || (url.pathname === location.pathname && url.search === location.search && url.hash)) return;
+    event.preventDefault();
+    navigating = true;
+    if (menu.open) menu.close();
+    curtain.dataset.state = 'covering';
+    setTimeout(() => location.assign(url.href), 300);
+  });
+}
 
 const filters = document.querySelector('[data-filters]');
 if (filters) {
@@ -204,11 +241,55 @@ if (chat) {
   chatObserver.observe(chat);
 }
 
-if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+if (!reducedMotion) {
   const doors = new IntersectionObserver((entries) => {
     for (const entry of entries) entry.target.classList.toggle('is-near', entry.isIntersecting);
   }, { rootMargin: '-16% 0px -12% 0px', threshold: 0.6 });
   for (const door of document.querySelectorAll('.door-card')) doors.observe(door);
+
+  const lineup = document.querySelector('.lineup');
+  const lineupSource = lineup?.querySelector('[data-lineup]');
+  if (lineup && lineupSource) {
+    const pool = JSON.parse(lineupSource.textContent);
+    const slots = [...lineup.querySelectorAll('.portrait')];
+    if (pool.length > slots.length) {
+      const delays = [1900, 2500, 1700, 2300, 2000, 2800, 1800];
+      let step = 0;
+      let pausedUntil = 0;
+      const pause = () => { pausedUntil = Date.now() + 1200; };
+      lineup.addEventListener('pointerenter', pause);
+      lineup.addEventListener('focusin', pause);
+      const scheduleNext = () => setTimeout(() => {
+        if (!document.hidden && Date.now() >= pausedUntil) {
+          const candidates = slots.filter((slot) => !slot.matches(':hover, :focus-within') && !slot.dataset.state);
+          const slot = candidates[Math.floor(Math.random() * candidates.length)];
+          if (slot) {
+            const shown = new Set(slots.map((item) => new URL(item.href, location.href).pathname));
+            const nextPool = pool.filter((item) => !shown.has(new URL(item.href, location.href).pathname));
+            const next = nextPool[Math.floor(Math.random() * nextPool.length)];
+            if (next) {
+              slot.dataset.state = 'duck';
+              setTimeout(() => {
+                slot.href = next.href;
+                slot.setAttribute('aria-label', `Meet ${next.name}`);
+                slot.querySelector('img').src = next.src;
+                slot.querySelector('.hand').textContent = next.name;
+                slot.dataset.state = 'pop';
+                slot.classList.add('is-named');
+                setTimeout(() => {
+                  if (slot.dataset.state === 'pop') delete slot.dataset.state;
+                }, 600);
+                setTimeout(() => slot.classList.remove('is-named'), 1800);
+              }, 350);
+            }
+          }
+        }
+        step = (step + 1) % delays.length;
+        scheduleNext();
+      }, delays[step]);
+      setTimeout(scheduleNext, 2100);
+    }
+  }
 }
 
 for (const form of document.querySelectorAll('[data-enquiry]')) {
